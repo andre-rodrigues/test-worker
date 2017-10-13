@@ -25,5 +25,10 @@ class Test1Worker
       {}.to_json,
       routing_key: 'test-publisher.routing_key'
     )
+
+    RabbitmqUtils::MessagePublisher.instance.publish!(
+      {}.to_json,
+      routing_key: 'test432423-publisher.routing_key'
+    )
   end
 end
